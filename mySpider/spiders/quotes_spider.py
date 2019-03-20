@@ -3,7 +3,7 @@ from scrapy.utils.project import get_project_settings
 
 
 class QuotesSpider(scrapy.Spider):
-    name = "quotes"
+    name = "xgg"
 
     def start_requests(self):
         urls = [
@@ -19,6 +19,8 @@ class QuotesSpider(scrapy.Spider):
         print ('LOG_LEVEL:'+LOG_LEVEL)
         page = response.url.split("/")[-2]
         filename = 'quotes-%s.html' % page
+        print('User-Agent:')
+        print(response.request.headers['User-Agent'])
         with open(filename, 'wb') as f:
             f.write(response.body)
         self.log('Saved file %s' % filename)

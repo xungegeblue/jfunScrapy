@@ -1,0 +1,8 @@
+jfunScrapy是使用了python的爬虫框架Scrapy搭建了一个学习的例子
+
+主要实现了一些功能:
+
+1.使用UserAgent动态更换User-Aget
+2.爬取某一个网站，然后输出到控制台
+3.使用CrawlerProcess调用多个爬虫
+4.使用schedule调度爬虫

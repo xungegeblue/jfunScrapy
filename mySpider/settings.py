@@ -55,6 +55,7 @@ CONCURRENT_REQUESTS = 90
 DOWNLOADER_MIDDLEWARES = {
    # 'mySpider.middlewares.MyspiderDownloaderMiddleware': 543,
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    #'mySpider.middlewares1.MyUserAgentMiddleware': 543,
     'mySpider.middlewares2.RandomUserAgentMiddleware': 543,
 }
 

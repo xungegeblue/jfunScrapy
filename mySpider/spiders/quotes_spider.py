@@ -7,8 +7,7 @@ class QuotesSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'http://quotes.toscrape.com/page/1/',
-            'http://quotes.toscrape.com/page/2/',
+            'http://quotes.toscrape.com/page/1/'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
@@ -19,7 +18,7 @@ class QuotesSpider(scrapy.Spider):
         print ('LOG_LEVEL:'+LOG_LEVEL)
         page = response.url.split("/")[-2]
         filename = 'quotes-%s.html' % page
-        print('User-Agent:')
+        print('My User-Agent:')
         print(response.request.headers['User-Agent'])
         with open(filename, 'wb') as f:
             f.write(response.body)

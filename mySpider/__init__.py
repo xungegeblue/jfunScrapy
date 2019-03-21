@@ -1,6 +1,6 @@
 from  scrapy import cmdline
 # 输出未过滤的页面信息
-cmdline.execute('scrapy crawl xgg'.split())
+cmdline.execute('scrapy crawl tuicool'.split())
 #cmdline.execute('scrapy crawl quotes1 -o quotes.json'.split())
 # cmdline.execute('scrapy list'.split())
 
